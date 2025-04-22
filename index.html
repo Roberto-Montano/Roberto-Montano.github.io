@@ -1,77 +1,55 @@
-<html>
-  <head>
-  </head>
-  <style>
-    *{
-      font-family: Arial, sans-serif;
-    }
-    form{
-      margin: 15px 5px;
-      width: 500px;
-      font-size: 16px;
-    }
-    form h1{
-      text-align: center;
-    }
-    form label{
-      display: block;
-      margin-bottom: 5px;
-    }
-    form input, form textarea{
-      width: 100%;
-      padding: 7px;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      resize:none;
-    }
-    form button{
-      background: #4CAF50;
-      color: white;
-      padding: 10px 15px;
-      margin-top: 5px;
-      border: none;
-      cursor: pointer;
-    }
-    form button:hover{
-      background: green;
-    }
-  </style>
-  <body>
-    <form>
-      <h1>Aparta tu boleto</h1>
-      <label for="">Cliente</label>
-      <input type="text" class="cliente">
+<!DOCTYPE html>
+<html lang="en">
 
-      <label for="">Ubicacion</label>
-      <input type="text" class="ubicacion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Roberto Montaño</title>
+</head>
 
-      <label for="">Fecha</label>
-      <input type="text" class="date">
+<body>
+        <div class="bar">
+            <h1 id="CN">CV Roberto Montaño</h1>
+            <h3>Web Developer</h3>
+        </div><!--bar-->
+        <article>
+            <img src="img/290656353_424769262692687_1050810172544597939_n.jpg" alt="AWS_Initiate">
+            <div class="block">
+                <p id="TXTINTRO">
+                    Ingeniero Mecatrónico con una sólida base en programación, actualmente enfocado
+                    hacia el rol de Desarrollador Full-Stack. Poseo experiencia en desarrollo web y conocimientos
+                    fundamentales de la plataforma AWS Cloud, complementado por el manejo de tecnologías de Realidad
+                    Aumentada y Realidad Virtual, utilizando Unity como entorno principal de desarrollo.
+                    <br>
+                    <br>
+                    Busco crecer profesionalmente trabajando todos los dias por avanzar hasta algun dia convertirme en un Desarrollador Senior.
+                </p>
+                <div id="img_box">
+                    <div id="bx1">
+                        <img src="img/html-5 (1).png" alt="HTML">
+                        <img src="img/css-3 (1).png" alt="CSS">
+                        <img src="img/js (1).png" alt="JS">
+                        <img src="img/programacion.png" alt="Node.js">
+                        <img src="img/mysql (1).png" alt="mysql">
+                        <img src="img/php (1).png" alt="php">
+                    </div><!--bx1-->
+                    <div id="bx2">
+                        <img src="img/social (1).png" alt="aws">
+                        <img src="img/adobe-photoshop (1).png" alt="">
+                        <img src="img/ilustrador-adobe (1).png" alt="">
+                        <img src="img/figma (1).png" alt="figma">
+                        <img src="img/do-sostenido (1).png" alt="figma">
+                        <img src="img/piton (1).png" alt="figma">
+                    </div><!--bx2-->
+                </div>
+            </div><!--block-->
+        </article>
+</body>
 
-      <label for="">Pedido</label>
-      <textarea class="pedido"></textarea>
-      <button type="button" onclick="sendwhatsapp();">Send Via WhatsApp</button>
-    </form>
-
-    <script>
-      function sendwhatsapp(){
-       var phonenumber = "+5218332619340";
-
-       var cliente = document.querySelector(".cliente").value;
-       var ubicacion = document.querySelector(".ubicacion").value;
-       var date = document.querySelector(".date").value;
-       var pedido = document.querySelector(".pedido").value;
-
-       var url = "https://wa.me/" + phonenumber + "?text="
-       +"*Cliente :* "+cliente+"%0a"
-       +"*Ubicación :* "+ubicacion+"%0a"
-       +"*Fecha:* "+date+"%0a"
-       +"*Pedido :* "+"%0a"+pedido
-       +"%0a%0a"
-       +"Scirpt Whatsapp 1.0.1";
-
-       window.open(url, '_blank').focus();
-     }
-    </script>
-  </body>
 </html>
